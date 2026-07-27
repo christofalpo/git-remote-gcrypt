@@ -345,8 +345,7 @@ EOF
 
 DECRYPT()
 {
-	rungpg -q --batch --no-default-keyring --secret-keyring /dev/null \
-		--keyring /dev/null --passphrase-fd 3 -d  3<<EOF
+	rungpg -q --batch --no-keyring --passphrase-fd 3 -d  3<<EOF
 $1
 EOF
 }
